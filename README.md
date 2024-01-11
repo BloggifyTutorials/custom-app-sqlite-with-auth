@@ -17,17 +17,17 @@
 
 
 
-# Bloggify Sqlite Custom App
+# Bloggify Application With Sqlite With Auth
 
- [![Version](https://img.shields.io/npm/v/bloggify-custom-app-template-sqlite.svg)](https://www.npmjs.com/package/bloggify-custom-app-template-sqlite) [![Downloads](https://img.shields.io/npm/dt/bloggify-custom-app-template-sqlite.svg)](https://www.npmjs.com/package/bloggify-custom-app-template-sqlite)
-
-
+ [![Version](https://img.shields.io/npm/v/bloggify-custom-app-template-sqlite-with-auth.svg)](https://www.npmjs.com/package/bloggify-custom-app-template-sqlite-with-auth) [![Downloads](https://img.shields.io/npm/dt/bloggify-custom-app-template-sqlite-with-auth.svg)](https://www.npmjs.com/package/bloggify-custom-app-template-sqlite-with-auth)
 
 
 
 
 
-> A custom application built with @Bloggify.
+
+
+> A template for an application using Sqlite with user authentication.
 
 
 
@@ -49,10 +49,13 @@
 
 ```bash
 # Clone this repository
-git clone https://github.com/Bloggify/custom-app-sqlite
+git clone https://github.com/Bloggify/custom-app-sqlite-with-auth
 
 # Install the dependencies
-cd custom-app-sqlite && npm i
+cd custom-app-sqlite-with-auth && npm i
+
+# Create the root user
+npm run create-root-user
 
 # Start the app in dev mode
 npm run start:dev
@@ -89,6 +92,13 @@ There are few ways to get help:
  2. For bug reports and feature requests, open issues. :bug:
 
 
+
+
+
+## :memo: Documentation
+
+
+### sqlite3
 
 
 

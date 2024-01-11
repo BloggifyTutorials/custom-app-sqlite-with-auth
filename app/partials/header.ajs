@@ -5,3 +5,12 @@
         <% mod("bloggify-ajs-components/lib/og-social") %>
     </head>
     <body>
+        <center>
+            <a href="/">Home</a> |
+            <% if (ctx.user) { %>
+                Authenticated as <a href="/user/account"><%= ctx.user.email %></a> | <a href="/user/signout">Sign out</a>
+            <% } else { %>
+                <a href="/user/signin">Sign in</a>
+            <% } %>
+        </center>
+        <hr>

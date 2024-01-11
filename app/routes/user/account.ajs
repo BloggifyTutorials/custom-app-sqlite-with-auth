@@ -1,0 +1,5 @@
+<% include(Bloggify.partials.header) %>
+
+<pre><%= JSON.stringify(ctx.user, null, 4) %></pre>
+
+<% include(Bloggify.partials.footer) %>

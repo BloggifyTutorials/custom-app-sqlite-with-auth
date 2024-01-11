@@ -1,8 +1,8 @@
 {
-  "name": "bloggify-custom-app-template-sqlite",
-  "version": "3.0.0",
-  "description": "A custom application built with @Bloggify.",
-  "main": "bloggify.json",
+  "name": "bloggify-custom-app-template-sqlite-with-auth",
+  "version": "1.0.0",
+  "description": "A template for an application using Sqlite with user authentication.",
+  "main": "bloggify.js",
   "scripts": {
     "start": "npm run start:prod",
     "start:dev": "bloggify-dev-start -r",
@@ -12,27 +12,31 @@
     "start:prod": "BLOGGIFY_LOG_LEVEL=4 bloggify-prod-start --no-workers",
     "start:prod:debug": "NODE_ENV=production node inspect `which bloggify` start",
     "start:prod:debug:devtools": "NODE_ENV=production node inspect --inspect `which bloggify` start",
+    "create-root-user": "PORT=8888 bloggify-dev-start -s scripts/2-create-root-user.js",
     "postinstall": "obj2env -c 'Enter the SQLITE database file path.' DB_URI=sqlite://data/db.sqlite3"
   },
-  "author": "Bloggify <support@bloggify.org> (https://bloggify.org)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BloggifyTutorials/custom-app-sqlite/issues"
+    "url": "https://github.com/BloggifyTutorials/custom-app-sqlite-with-auth/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BloggifyTutorials/custom-app-sqlite.git"
+    "url": "git+https://github.com/BloggifyTutorials/custom-app-sqlite-with-auth.git"
   },
-  "homepage": "https://github.com/BloggifyTutorials/custom-app-sqlite#readme",
+  "homepage": "https://github.com/BloggifyTutorials/custom-app-sqlite-with-auth#readme",
   "blah": {
-    "title": "Bloggify Sqlite Custom App",
+    "title": "Bloggify Application With Sqlite With Auth",
     "installation_command": {
       "content": [
         "# Clone this repository",
-        "git clone https://github.com/Bloggify/custom-app-sqlite",
+        "git clone https://github.com/Bloggify/custom-app-sqlite-with-auth",
         "",
         "# Install the dependencies",
-        "cd custom-app-sqlite && npm i",
+        "cd custom-app-sqlite-with-auth && npm i",
+        "",
+        "# Create the root user",
+        "npm run create-root-user",
         "",
         "# Start the app in dev mode",
         "npm run start:dev"
@@ -45,11 +49,28 @@
     "bloggify-ajs-components": "^1.0.0",
     "bloggify-icons": "^1.0.1",
     "bloggify-sequelize": "^2.1.3",
+    "bloggify-user-auth": "^3.2.1",
     "express-session-sqlite": "^2.1.1",
     "obj2env-cli": "^1.0.6",
+    "passport-local": "^1.0.0",
     "sqlite3": "^5.0.0"
   },
   "devDependencies": {
     "bloggify-cli": "^3.0.0"
-  }
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "scripts/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js",
+    "bloggify.js",
+    "bloggify.json",
+    "bloggify/"
+  ]
 }

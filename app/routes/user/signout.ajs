@@ -1,0 +1,16 @@
+<% include(Bloggify.partials.header) %>
+
+<div class="container py-4 mt-3">
+    <div class="col-md-4 offset-md-4">
+        <div class="bg-light p-3 rounded mt-5">
+            <form method="POST" class="form-centered">
+                <h3>Do you want to sign out?</h3>
+               <%- ctx.csrfInput %>
+               <button class="btn btn-primary w-100">Sign out</button>
+               <a href="/" class="mt-2 btn btn-secondary w-100">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include(Bloggify.partials.footer) %>
