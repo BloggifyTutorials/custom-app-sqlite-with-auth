@@ -29,3 +29,34 @@ ol#items-list {
     text-align: left;
     padding-left: 60px;
 }
+
+button {
+    width: 30%;
+    color:black; 
+    border: 2px solid #ccc;
+    border-radius: 40px;
+    background: #fff;
+   }
+
+a {
+    color: black;
+    border: 2px solid #ccc;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button:hover {
+background-color: #f2f2f2;
+transition: .1s;}
+
+a:hover {
+background-color: #f2f2f2;
+transition: .1s;
+}
+
+div {
+padding-bottom: 25px;
+}
